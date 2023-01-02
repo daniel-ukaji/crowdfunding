@@ -1,7 +1,6 @@
 import React from 'react'
-import { Navbar } from 'react-bootstrap';
 import { Route, Routes } from 'react-router-dom';
-import { Sidebar } from './components';
+import { Navbar, Sidebar } from './components';
 
 import { CampaignDetails, CreateCampaign, Home, Profile } from './pages'
 
@@ -17,6 +16,9 @@ const App = () => {
 
         <Routes>
           <Route path='/' element={<Home /> } />
+          <Route path='/profile' element={<Profile /> } />
+          <Route path='/create-campaign' element={<CreateCampaign /> } />
+          <Route path='/campaign-details/:id' element={<CampaignDetails /> } />
         </Routes>
       </div>
 
